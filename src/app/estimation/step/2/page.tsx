@@ -2,13 +2,19 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
-import { FaXing, FaBars, FaFileUpload } from "react-icons/fa";
+import { FaXing, FaBars, FaFileUpload, FaBoxes } from "react-icons/fa";
 
 const navigation = [
   { name: "Step 1", href: "1", icon: "", current: true },
   { name: "Step 2", href: "2", icon: "", current: false },
   { name: "Step 3 ", href: "3", icon: "", current: false },
 ];
+
+const navigationbar = [
+  { name: "Create", href: "#" },
+  { name: "Manage", href: "#" },
+];
+
 const teams = [
   { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
   { id: 2, name: "Tailwind Labs", href: "#", initial: "T", current: false },
@@ -26,14 +32,44 @@ export default function Example() {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
+      <header className="absolute inset-x-0 top-0 z-50 pb-4">
+        <nav
+          className="flex items-center justify-between p-6 lg:px-8"
+          aria-label="Global"
+        >
+          <div className="flex lg:flex-1">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <img
+                className="h-8 w-auto"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                alt=""
+              />
+            </a>
+          </div>
 
-        ```
-        <html class="h-full bg-gray-50">
-        <body class="h-full">
-        ```
-      */}
+          <div className="hidden lg:flex lg:gap-x-12">
+            {navigationbar.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="#"
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
+              {/* Get Quoted <span aria-hidden="true">&rarr;</span> */}
+              <FaBoxes className="mr-5" size={50} />
+            </a>
+          </div>
+        </nav>
+      </header>
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
@@ -202,10 +238,10 @@ export default function Example() {
         </div>
 
         <main className="py-10 lg:pl-72">
-          <div className="px-4 sm:px-6 lg:px-8">
+          <div className="px-4 sm:px-6 lg:px-8 pt-4">
             {/* Your content */}
 
-            <div className="space-y-12">
+            <div className="space-y-12 mt-10">
               <div className="border-b border-gray-900/10 pb-12">
                 <h2 className="text-base font-semibold leading-7 text-gray-900">
                   Property Details
