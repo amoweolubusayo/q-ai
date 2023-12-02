@@ -5,9 +5,9 @@ import { Dialog, Transition } from "@headlessui/react";
 import { FaXing, FaBars } from "react-icons/fa";
 
 const navigation = [
-  { name: "Step 1", href: "", icon: "", current: true },
-  { name: "Step 2", href: "", icon: "", current: false },
-  { name: "Step 3 ", href: "", icon: "", current: false },
+  { name: "Step 1", href: "1", icon: "", current: true },
+  { name: "Step 2", href: "2", icon: "", current: false },
+  { name: "Step 3 ", href: "3", icon: "", current: false },
 ];
 const teams = [
   { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
