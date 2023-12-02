@@ -208,7 +208,7 @@ export default function Example() {
             <div className="space-y-12">
               <div className="border-b border-gray-900/10 pb-12">
                 <h2 className="text-base font-semibold leading-7 text-gray-900">
-                  Property Details
+                  Budget and Billing
                 </h2>
 
                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -217,11 +217,8 @@ export default function Example() {
                       htmlFor="username"
                       className="block text-sm font-medium leading-6 text-gray-900"
                     >
-                      Property type
+                      Budget Range for Services
                     </label>
-                    <p className="text-sm leading-6 text-gray-600">
-                      What kind of property do you manage? *{" "}
-                    </p>
 
                     <div className="mt-2">
                       <select
@@ -230,61 +227,11 @@ export default function Example() {
                         autoComplete="country-name"
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                       >
-                        <option value="residential">
-                          Residential (e.g., Condos, Apartments)
-                        </option>
-                        <option value="commercial">
-                          Commercial (e.g., Malls, Retail)
-                        </option>
-                        <option value="industrial">Industrial</option>
-                        <option value="institutional">
-                          Institutional (e.g., Schools, Healthcare)
-                        </option>
-                        <option value="warehouse">Warehouse</option>
-                        <option value="mixed_use">Mixed-use</option>
-                        <option value="other_building_type">Other</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="sm:col-span-2 sm:col-start-1">
-                    <label
-                      htmlFor="city"
-                      className="block text-sm font-medium leading-6 text-gray-900"
-                    >
-                      Total Property Area(m2)
-                    </label>
-                    <p className="text-sm leading-6 text-gray-600">
-                      How large is your property? *{" "}
-                    </p>
-                    <div className="mt-2">
-                      <select
-                        id="country"
-                        name="country"
-                        autoComplete="country-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      >
-                        <option value="under_5000_sqft">
-                          {" "}
-                          less than 5000 sq. ft. (e.g., Small boutique shops
-                          like those in Kensington Market, Toronto)
-                        </option>
-                        <option value="5000_to_20000_sqft">
-                          5000 - 20000 sq. ft. (e.g., Medium-sized office spaces
-                          like many in Liberty Village, Toronto)
-                        </option>
-                        <option value="20000_to_50000_sqft">
-                          20000 - 50000 sq. ft. (e.g., Larger commercial spaces
-                          like St. Lawrence Market, Toronto)
-                        </option>
-                        <option value="50000_to_100000_sqft">
-                          50000 - 100000 sq. ft. (e.g., Large office buildings
-                          like the TD Canada Trust Tower, Toronto)
-                        </option>
-                        <option value="over_100000_sqft">
-                          100000 sq. ft. (e.g., Major shopping centers like the
-                          Eaton Centre, Toronto)
-                        </option>
-                        <option value="other_building_size">Other</option>
+                        <option value="up_to_500">Up to $500</option>
+                        <option value="500_to_2000">$500 - $2000</option>
+                        <option value="2000_to_8000">$2000 - $8000</option>
+                        <option value="above_8000">Above $8000</option>
+                        <option value="other_budget">Other:</option>
                       </select>
                     </div>
                   </div>
@@ -294,11 +241,8 @@ export default function Example() {
                       htmlFor="city"
                       className="block text-sm font-medium leading-6 text-gray-900"
                     >
-                      Location and Address of Property
+                      Previous Maintenance/Inspection Costs
                     </label>
-                    <p className="text-sm leading-6 text-gray-600">
-                      How large is your property? *{" "}
-                    </p>
                     <div className="mt-2">
                       <input
                         type="text"
@@ -314,7 +258,7 @@ export default function Example() {
 
               <div className="border-b border-gray-900/10 pb-12">
                 <h2 className="text-base font-semibold leading-7 text-gray-900">
-                  Building Specifications
+                  Scheduling Preferences:
                 </h2>
 
                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -323,11 +267,8 @@ export default function Example() {
                       htmlFor="first-name"
                       className="block text-sm font-medium leading-6 text-gray-900"
                     >
-                      Age of the Building
+                      Preferred Days for Services
                     </label>
-                    <p className="mt-1 text-sm leading-6 text-gray-600">
-                      How old is your property? *
-                    </p>
                     <div className="mt-2">
                       <select
                         id="country"
@@ -335,17 +276,13 @@ export default function Example() {
                         autoComplete="country-name"
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                       >
-                        <option value="brand_new">Brand New (0 Years)</option>
-                        <option value="moderately_new">
-                          Moderately New (1-10 Years)
-                        </option>
-                        <option value="a_bit_older">
-                          A Bit Older (10-40 Years)
-                        </option>
-                        <option value="historical">
-                          Historical (50+ Years)
-                        </option>
-                        <option value="other_building_age">Other</option>
+                        <option value="sunday">Sunday</option>
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
                       </select>
                     </div>
                   </div>
@@ -355,11 +292,8 @@ export default function Example() {
                       htmlFor="last-name"
                       className="block text-sm font-medium leading-6 text-gray-900"
                     >
-                      Number of Floors
+                      Preferred Times for Services
                     </label>
-                    <p className="mt-1 text-sm leading-6 text-gray-600">
-                      How many levels does your building have? *
-                    </p>
                     <div className="mt-2">
                       <select
                         id="country"
@@ -367,23 +301,35 @@ export default function Example() {
                         autoComplete="country-name"
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                       >
-                        <option value="ground_only">Ground Only</option>
-                        <option value="1_to_5_floors">1-5 Floors</option>
-                        <option value="6_to_10_floors">6-10 Floors</option>
-                        <option value="11_to_15_floors">11-15 Floors</option>
-                        <option value="16_to_20_floors">16-20 Floors</option>
-                        <option value="above_20_floors">Above 20 Floors</option>
-                        <option value="other_floors">Other</option>
+                        <option value="morning">
+                          Morning (9:00 AM - 12:00 PM)
+                        </option>
+                        <option value="afternoon">
+                          Afternoon (1:00 PM - 5:00 PM)
+                        </option>
+                        <option value="evening">
+                          Evening (6:00 PM - 9:00 PM)
+                        </option>
+                        <option value="weekend_morning">
+                          Weekend Morning (10:00 AM - 1:00 PM)
+                        </option>
+                        <option value="weekend_afternoon">
+                          Weekend Afternoon (2:00 PM - 5:00 PM)
+                        </option>
+                        <option value="weekend_evening">
+                          Weekend Evening (6:00 PM - 8:00 PM)
+                        </option>
+                        <option value="anytime">Anytime</option>
                       </select>
                     </div>
                   </div>
 
-                  <div className="sm:col-span-4">
+                  <div className="sm:col-span-3">
                     <label
-                      htmlFor="email"
+                      htmlFor="last-name"
                       className="block text-sm font-medium leading-6 text-gray-900"
                     >
-                      Specific Areas Needing Inspection Maintenance
+                      Urgency or Priority Level
                     </label>
                     <div className="mt-2">
                       <select
@@ -392,36 +338,41 @@ export default function Example() {
                         autoComplete="country-name"
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                       >
-                        <option value="smoke_control_systems">
-                          Smoke Control Systems: Verification of the
-                          functionality and efficiency of smoke control and
-                          management systems.
+                        <option value="high">High Priority</option>
+                        <option value="medium">Medium Priority</option>
+                        <option value="low">Low Priority</option>
+                        <option value="urgent">Urgent</option>
+                        <option value="normal">Normal</option>
+                        <option value="routine">Routine</option>
+                        <option value="critical">Critical</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="sm:col-span-3">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium leading-6 text-gray-900"
+                    >
+                      Access Availability for Inspectors
+                    </label>
+                    <div className="mt-2">
+                      <select
+                        id="country"
+                        name="country"
+                        autoComplete="country-name"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                      >
+                        <option value="full_day">Full Day Access</option>
+                        <option value="morning_only">Morning Only</option>
+                        <option value="afternoon_only">Afternoon Only</option>
+                        <option value="evening_only">Evening Only</option>
+                        <option value="weekdays">Weekdays Only</option>
+                        <option value="weekends">Weekends Only</option>
+                        <option value="specific_time">
+                          Specific Time (Specify in Comments)
                         </option>
-                        <option value="fire_code_compliance_audit">
-                          Fire Code Compliance Audit: Detailed review of the
-                          building to identify and rectify any fire code
-                          violations.
-                        </option>
-                        <option value="fire_extinguishers">
-                          Fire Extinguishers: Checking expiration dates, seals,
-                          and ensuring proper placement.
-                        </option>
-                        <option value="post_activation_checks">
-                          Post-Activation System Checks: Comprehensive
-                          inspection of all fire safety systems following
-                          activation during an incident to ensure they are reset
-                          and fully functional.
-                        </option>
-                        <option value="suppression_system_cleanup">
-                          Fire Suppression System Residue Cleanup: Inspection
-                          and maintenance to address any residue or damage from
-                          activated fire suppression systems (e.g., foam or
-                          chemical agents).
-                        </option>
-                        <option value="fire_escape_routes">
-                          Fire Escape Routes: Ensuring clear and accessible
-                          escape routes and signage.
-                        </option>
+                        <option value="flexible">Flexible Schedule</option>
                       </select>
                     </div>
                   </div>
@@ -430,51 +381,16 @@ export default function Example() {
 
               <div className="border-b border-gray-900/10 pb-12">
                 <h2 className="text-base font-semibold leading-7 text-gray-900">
-                  Current Systems and Conditions:
+                  Additional Requirements:
                 </h2>
 
                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                  <div className="sm:col-span-4">
-                    <label
-                      htmlFor="username"
-                      className="block text-sm font-medium leading-6 text-gray-900"
-                    >
-                      Existing Safety Systems
-                    </label>
-
-                    <div className="mt-2">
-                      <select
-                        id="country"
-                        name="country"
-                        autoComplete="country-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      >
-                        <option value="fire_extinguishers_types_sizes">
-                          Fire Extinguishers: Types and Sizes
-                        </option>
-                        <option value="sprinkler_systems">
-                          Sprinkler Systems: Wet, Dry, Pre-Action, or Deluge
-                        </option>
-                        <option value="fire_alarm_systems">
-                          Fire Alarm Systems: Conventional, Addressable, or
-                          Hybrid
-                        </option>
-                        <option value="emergency_exit_lighting">
-                          Emergency and Exit Lighting
-                        </option>
-                        <option value="fire_doors_accessories">
-                          Fire Doors and Accessories
-                        </option>
-                      </select>
-                    </div>
-                  </div>
-
                   <div className="sm:col-span-2 sm:col-start-1">
                     <label
                       htmlFor="city"
                       className="block text-sm font-medium leading-6 text-gray-900"
                     >
-                      Current Maintenance Schedule
+                      Special Instructions or Concerns
                     </label>
                     <div className="mt-2">
                       <input
@@ -492,72 +408,16 @@ export default function Example() {
                       htmlFor="city"
                       className="block text-sm font-medium leading-6 text-gray-900"
                     >
-                      Recent Repairs or Upgrades
+                      Accessibility Considerations
                     </label>
                     <div className="mt-2">
-                      <select
-                        id="country"
-                        name="country"
-                        autoComplete="country-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      >
-                        <option value="extinguisher_replacements">
-                          Fire Extinguishers: Replacements completed for damaged
-                          units
-                        </option>
-                        <option value="alarm_system_upgrades">
-                          Fire Alarm Systems: Upgrades to addressable models for
-                          enhanced location precision
-                        </option>
-                        <option value="sprinkler_system_leak_repairs">
-                          Sprinkler Systems: Leak repairs conducted on sprinkler
-                          heads
-                        </option>
-                        <option value="emergency_lighting_installation">
-                          Emergency Lighting: Additional units installed for
-                          improved visibility and safety compliance
-                        </option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-b border-gray-900/10 pb-12">
-                <h2 className="text-base font-semibold leading-7 text-gray-900">
-                  Compliance and Regulations:
-                </h2>
-
-                <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                  <div className="sm:col-span-4">
-                    <label
-                      htmlFor="username"
-                      className="block text-sm font-medium leading-6 text-gray-900"
-                    >
-                      Compliance Requirements
-                    </label>
-
-                    <div className="mt-2">
-                      <select
-                        id="country"
-                        name="country"
-                        autoComplete="country-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      >
-                        <option value="local_fire_safety_codes">
-                          Local Fire Safety Codes and Regulations
-                        </option>
-                        <option value="nfpa_standards">
-                          National Fire Protection Association (NFPA) Standards
-                        </option>
-                        <option value="osha_requirements">
-                          Occupational Safety and Health Administration (OSHA)
-                          Requirements
-                        </option>
-                        <option value="insurance_requirements">
-                          Insurance Company Fire Safety Requirements
-                        </option>
-                      </select>
+                      <input
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        autoComplete="given-name"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      />
                     </div>
                   </div>
 
@@ -566,63 +426,16 @@ export default function Example() {
                       htmlFor="city"
                       className="block text-sm font-medium leading-6 text-gray-900"
                     >
-                      Any Known Regulatory Issues
+                      Long-Term Maintenance Goals
                     </label>
                     <div className="mt-2">
-                      <select
-                        id="country"
-                        name="country"
-                        autoComplete="country-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      >
-                        <option value="overdue_inspections_maintenance">
-                          Overdue inspections or maintenance
-                        </option>
-                        <option value="non_compliance_notices">
-                          Non-compliance notices from last inspection
-                        </option>
-                        <option value="updates_required_new_regulations">
-                          Updates required by new regulations
-                        </option>
-                        <option value="fire_code_violations">
-                          Fire Code Violations needing immediate correction
-                        </option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="sm:col-span-2 sm:col-start-1">
-                    <label
-                      htmlFor="city"
-                      className="block text-sm font-medium leading-6 text-gray-900"
-                    >
-                      Previous Inspection Reports
-                    </label>
-                    <div className="mt-2">
-                      <div className="text-center">
-                        <FaFileUpload
-                          className="mx-auto h-12 w-12 text-gray-300"
-                          aria-hidden="true"
-                        />
-                        <div className="mt-4 flex text-sm leading-6 text-gray-600">
-                          <label
-                            htmlFor="file-upload"
-                            className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
-                          >
-                            <span>Upload a file</span>
-                            <input
-                              id="file-upload"
-                              name="file-upload"
-                              type="file"
-                              className="sr-only"
-                            />
-                          </label>
-                          <p className="pl-1">or drag and drop</p>
-                        </div>
-                        <p className="text-xs leading-5 text-gray-600">
-                          PDF, DOC, DOCX up to 10MB
-                        </p>
-                      </div>
+                      <input
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        autoComplete="given-name"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      />
                     </div>
                   </div>
                 </div>
