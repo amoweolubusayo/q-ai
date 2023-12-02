@@ -60,43 +60,25 @@ export default function Project() {
                     The ultimated AI tool for quotation, based on real time
                     market insights and personal requirements
                   </p>
-                  <div className="mt-2">
-                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                    <button
-        type="button"
-        className="rounded bg-white px-2 py-1 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-      >
-        xxxxxxx
-      </button>
-      <button
-        type="button"
-        className="rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-      >
-        Button text
-      </button>
-      <button
-        type="button"
-        className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-      >
-        Button text
-      </button>
-      <button
-        type="button"
-        className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-      >
-        Button text
-      </button>
-      <button
-        type="button"
-        className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-      >
-        Button text
-      </button>
-                     
+                  <div className="flex mt-2">
+                    <p className="mr-10">xxxxxxx</p>
 
+                    <p className="mr-10">Quote</p>
 
-                    </div>
+                    <p className="mr-10">23/11/2023</p>
+                    <p className="mr-10"> Bella </p>
+                    <p className="mr-10">quote.xlsx</p>
                   </div>
+                  <div className="flex mt-2">
+                    <p className="mr-10 text-xs">Project Name</p>
+
+                    <p className="mr-10 text-xs">Document type</p>
+
+                    <p className="mr-10 text-xs">Submission schedule</p>
+                    <p className="mr-10 text-xs"> Customer Name </p>
+                    <p className="mr-10 text-xs">Document File</p>
+                  </div>
+
                 </div>
 
                 <div className="col-span-full">
@@ -116,14 +98,13 @@ export default function Project() {
                     />
                   </div>
                   <div className="mt-6 flex items-center justify-start gap-x-6">
-               
-                  <button
-                    type="submit"
-                    className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  >
-                    Regenrate
-                  </button>
-              </div>
+                    <button
+                      type="submit"
+                      className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    >
+                      Regenrate
+                    </button>
+                  </div>
                 </div>
 
                 <div className="col-span-full">
@@ -143,18 +124,16 @@ export default function Project() {
                     />
                   </div>
                   <div className="mt-6 flex items-center justify-start gap-x-6">
-               
-               <button
-                 type="submit"
-                 className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-               >
-                 Regenrate
-               </button>
-           </div>
+                    <button
+                      type="submit"
+                      className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    >
+                      Regenrate
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          
           </form>
 
           <div className="px-4 sm:px-0">
@@ -172,8 +151,7 @@ export default function Project() {
             >
               Reject Estimation
             </button>
-            <p className="mt-1 text-sm leading-6 text-gray-600">
-            </p>
+            <p className="mt-1 text-sm leading-6 text-gray-600"></p>
             <button
               type="button"
               className="rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 mt-5"
