@@ -17,7 +17,7 @@ const people = [
 ];
 const navigation = [
   { name: "Create", href: "#" },
-  { name: "Manage", href: "#" },
+  { name: "Manage", href: "/manage/details" },
 ];
 
 export default function Manage() {
