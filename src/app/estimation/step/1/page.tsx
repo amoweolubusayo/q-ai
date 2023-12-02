@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
@@ -330,6 +331,16 @@ export default function Example() {
                     <option value="monthly">Monthly</option>
                     <option value="other">Other</option>
                   </select>
+                </div>
+                <div className="mt-6 flex items-center justify-end gap-x-6">
+                  <Link href="/estimation/step/2">
+                    <button
+                      type="submit"
+                      className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    >
+                      Next
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

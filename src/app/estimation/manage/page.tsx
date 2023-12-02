@@ -1,16 +1,12 @@
-import { FaBoxes } from "react-icons/fa";
+"use client";
+import { FaBoxes, FaCaretUp, FaCaretDown } from "react-icons/fa";
 import Link from "next/link";
+import { Disclosure } from "@headlessui/react";
 
 const people = [
   {
     name: "EST 1",
-    title: "Inspection",
-    email: "150,000.00",
-    role: "11 Months",
-  },
-  {
-    name: "EST 1",
-    title: "Inspection",
+    title: "Fire Inspection",
     email: "150,000.00",
     role: "11 Months",
   },
@@ -18,6 +14,17 @@ const people = [
 const navigation = [
   { name: "Create", href: "#" },
   { name: "Manage", href: "/manage/details" },
+];
+
+const details = [
+  {
+    heading: "Property Details",
+    description: "Residential.",
+  },
+  {
+    heading: "Building Specification",
+    description: "Brand New.",
+  },
 ];
 
 export default function Manage() {
@@ -172,7 +179,7 @@ export default function Manage() {
                       scope="col"
                       className="relative py-3.5 pl-3 pr-4 sm:pr-0"
                     >
-                      <span className="sr-only">Edit</span>
+                      {/* <span className="sr-only">Edit</span> */}
                     </th>
                   </tr>
                 </thead>
@@ -192,12 +199,48 @@ export default function Manage() {
                         {person.role}
                       </td>
                       <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                        <a
-                          href="#"
-                          className="text-indigo-600 hover:text-indigo-900"
-                        >
-                          Edit<span className="sr-only">, {person.name}</span>
-                        </a>
+                        <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
+                          {details.map((detail) => (
+                            <Disclosure
+                              as="div"
+                              key={detail.description}
+                              className="pt-6"
+                            >
+                              {({ open }) => (
+                                <>
+                                  <dt>
+                                    <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-900">
+                                      <span className="text-base font-semibold leading-7">
+                                        {detail.heading}
+                                      </span>
+                                      <span className="ml-6 flex h-7 items-center">
+                                        {open ? (
+                                          <FaCaretUp
+                                            className="h-6 w-6"
+                                            aria-hidden="true"
+                                          />
+                                        ) : (
+                                          <FaCaretDown
+                                            className="h-6 w-6"
+                                            aria-hidden="true"
+                                          />
+                                        )}
+                                      </span>
+                                    </Disclosure.Button>
+                                  </dt>
+                                  <Disclosure.Panel
+                                    as="dd"
+                                    className="mt-2 pr-12"
+                                  >
+                                    <p className="text-base leading-7 text-gray-600 text-left">
+                                      {detail.description}
+                                    </p>
+                                  </Disclosure.Panel>
+                                </>
+                              )}
+                            </Disclosure>
+                          ))}
+                        </dl>
                       </td>
                     </tr>
                   ))}
@@ -220,12 +263,12 @@ export default function Manage() {
               </div>
 
               <div className="mt-6 flex items-center justify-end gap-x-6">
-                <Link href="estimation/manage/details">
+                <Link href="/estimation/manage/details">
                   <button
                     type="submit"
                     className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    See Details
+                    See Details &gt; &gt;
                   </button>
                 </Link>
               </div>
