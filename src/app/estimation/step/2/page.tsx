@@ -6,8 +6,8 @@ import { Dialog, Transition } from "@headlessui/react";
 import { FaXing, FaBars, FaFileUpload, FaBoxes } from "react-icons/fa";
 
 const navigation = [
-  { name: "Step 1", href: "1", icon: "", current: true },
-  { name: "Step 2", href: "2", icon: "", current: false },
+  { name: "Step 1", href: "1", icon: "", current: false },
+  { name: "Step 2", href: "2", icon: "", current: true },
   { name: "Step 3 ", href: "3", icon: "", current: false },
 ];
 
