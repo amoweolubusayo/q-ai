@@ -202,7 +202,7 @@ export default function Home() {
                           aria-hidden="true"
                         />
                       </div>
-                      <span>{model.name}</span>
+                      <span><a href="/estimation/step/1">{model.name}</a></span>
                     </dt>
                   </div>
                 ))}

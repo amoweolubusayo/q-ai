@@ -29,7 +29,8 @@ export default function Login() {
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
           <div className="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">
-            <form className="space-y-6" action="#" method="POST">
+            {/* <form className="space-y-6" action="/selectmodel" method="POST"> */}
+            <form className="space-y-6" action="/selectmodel">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                   Email address
@@ -124,7 +125,7 @@ export default function Login() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span className="text-sm font-semibold leading-6">GitHub</span>
+                  <span className="text-sm font-semibold leading-6">Google</span>
                 </a>
               </div>
             </div>
