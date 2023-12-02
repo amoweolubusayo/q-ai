@@ -12,7 +12,7 @@ const navigation = [
 
 const navigationbar = [
   { name: "Create", href: "#" },
-  { name: "Manage", href: "#" },
+  { name: "Manage", href: "/manage/details" },
 ];
 const teams = [
   { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },

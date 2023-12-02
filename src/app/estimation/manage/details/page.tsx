@@ -1,5 +1,4 @@
 import { FaBoxes } from "react-icons/fa";
-import Link from "next/link";
 
 const people = [
   {
@@ -209,25 +208,14 @@ export default function Manage() {
                   type="submit"
                   className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Acceptance
+                  Proceed with Consultant
                 </button>
                 <button
                   type="submit"
                   className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Rejection Options
+                  Reject Estimation
                 </button>
-              </div>
-
-              <div className="mt-6 flex items-center justify-end gap-x-6">
-                <Link href="estimation/manage/details">
-                  <button
-                    type="submit"
-                    className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  >
-                    See Details
-                  </button>
-                </Link>
               </div>
             </div>
           </div>
