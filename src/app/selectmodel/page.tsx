@@ -202,7 +202,18 @@ export default function Home() {
                           aria-hidden="true"
                         />
                       </div>
-                      <span><a href="/estimation/step/1">{model.name}</a></span>
+                      <span>
+                        <a
+                          href={
+                            model.name ===
+                            "Commercial & Residential Property Quotation Services"
+                              ? "/estimation/step/1"
+                              : "/docquotation/step/1"
+                          }
+                        >
+                          {model.name}
+                        </a>
+                      </span>
                     </dt>
                   </div>
                 ))}
