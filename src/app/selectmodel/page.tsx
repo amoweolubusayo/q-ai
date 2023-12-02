@@ -60,30 +60,30 @@ const aims = [
 ];
 const model = [
   {
-    name: "House Estimation",
+    name: "Commercial & Residential Property Quotation Services",
     icon: FaHome,
   },
   {
-    name: "Docs Quotation",
+    name: "Corporate RFP & RFQ Response Suite",
     icon: FaBook,
   },
 ];
 const features = [
   {
-    name: "Join DrameBase as an Artist:",
+    name: "Join Qai as an Artist:",
     description:
       "Upload Music and Videos for streaming. Mint your content as NFT’s. Have Exclusive EP releases. Get funding and donations on projects. Host Virtual Events",
     icon: FaMusic,
   },
   {
-    name: "Join DrameBase as a Fan:",
+    name: "Join Qai as a Fan:",
     description:
       "Video Streaming.Music Streaming.Exclusive EP Access. Earn rewards for listening. Pay for Tickets to shows. Buy NFT’s and order in a physical copy",
     icon: FaVideo,
   },
   {
     name: "Token.",
-    description: "DrameBase Token (DB)",
+    description: "Qai Token (DB)",
     icon: FaMoneyBill,
   },
 ];
@@ -133,7 +133,7 @@ export default function Home() {
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               {/* Get Quoted <span aria-hidden="true">&rarr;</span> */}
-              <FaBoxes className="mr-5" size={50}/>
+              <FaBoxes className="mr-5" size={50} />
             </a>
           </div>
         </nav>
