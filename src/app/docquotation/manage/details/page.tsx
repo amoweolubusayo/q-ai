@@ -15,8 +15,8 @@ export default function Project() {
     const fetchData = async () => {
       try {
         const openai = new OpenAI({
-            apiKey: "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", // TEST (env variable fail of vercel. Fault tolerant)
-            dangerouslyAllowBrowser: true
+          apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+          dangerouslyAllowBrowser: true, // TEST (env variable fail of vercel. Fault tolerant)
         });
         const prompt = `
           think of a random RFP based on all info submitted by a proposal and generate an informed decision for a vendor like a microsost partner company. dont include random in your statement
