@@ -1,5 +1,7 @@
 "use client";
 import { FaTh } from "react-icons/fa";
+import * as dotenv from "dotenv";
+dotenv.config({ path: "/.env" });
 import { OpenAI } from "openai";
 import React, { useEffect, useState } from "react";
 const navigation = [
@@ -13,9 +15,9 @@ export default function Project() {
     const fetchData = async () => {
       try {
         const openai = new OpenAI({
-          apiKey: process.env.OPENAI_API_KEY,
+            apiKey: "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",
+            dangerouslyAllowBrowser: true
         });
-
         const prompt = `
           think of a random RFP based on all info submitted by a proposal and generate an informed decision for a vendor like a microsost partner company. dont include random in your statement
               `;

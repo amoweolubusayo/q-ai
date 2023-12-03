@@ -71,14 +71,12 @@ function classNames(
   return classes.filter(Boolean).join(" ");
 }
 
-
-
 export default function DocQuotation() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleSaveClick = () => {
     // Display toast message
-    toast.info("Please wait while our AI generates your quote", {
+    toast.info("Please wait while our AI generates the tender", {
       position: "bottom-right",
       autoClose: 2000, // Adjust as needed
       hideProgressBar: true,
@@ -87,7 +85,7 @@ export default function DocQuotation() {
       draggable: true,
       progress: undefined,
     });
-  
+
     setTimeout(() => {
       // Redirect to the link after the toast message
       window.location.href = "/docquotation/manage";
@@ -254,13 +252,13 @@ export default function DocQuotation() {
                 </div>
 
                 <div className="mt-6 flex items-center justify-end gap-x-6">
-                    <button
-                      type="submit"
-                      onClick={handleSaveClick}
-                      className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                    >
-                      Generate Response
-                    </button>
+                  <button
+                    type="submit"
+                    onClick={handleSaveClick}
+                    className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Generate Response
+                  </button>
                   <ToastContainer />
                 </div>
               </div>

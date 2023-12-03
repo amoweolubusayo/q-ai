@@ -14,7 +14,8 @@ export default function Project() {
     const fetchData = async () => {
       try {
         const openai = new OpenAI({
-          apiKey: process.env.OPENAI_API_KEY,
+          apiKey: "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", // TEST
+          dangerouslyAllowBrowser: true,
         });
 
         const prompt = `
