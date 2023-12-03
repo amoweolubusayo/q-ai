@@ -1,5 +1,5 @@
 "use client";
-import { FaBoxes, FaCaretUp, FaCaretDown } from "react-icons/fa";
+import { FaTh, FaCaretUp, FaCaretDown } from "react-icons/fa";
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
 
@@ -63,7 +63,7 @@ export default function Manage() {
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               {/* Get Quoted <span aria-hidden="true">&rarr;</span> */}
-              <FaBoxes className="mr-5" size={50} />
+              <FaTh className="mr-5" size={20} />
             </a>
           </div>
         </nav>

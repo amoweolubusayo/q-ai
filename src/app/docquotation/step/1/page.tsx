@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
-import { FaXing, FaBars, FaBoxes, FaFileUpload } from "react-icons/fa";
+import { FaXing, FaBars, FaTh, FaFileUpload } from "react-icons/fa";
 
 const navigation = [
   { name: "Step 1", href: "1", icon: "", current: true },
@@ -70,7 +70,7 @@ export default function DocQuotation() {
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               {/* Get Quoted <span aria-hidden="true">&rarr;</span> */}
-              <FaBoxes className="mr-5" size={50} />
+              <FaTh className="mr-5" size={20} />
             </a>
           </div>
         </nav>

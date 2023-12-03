@@ -1,4 +1,4 @@
-import { FaBoxes } from "react-icons/fa";
+import { FaTh } from "react-icons/fa";
 const navigation = [
   { name: "Create", href: "#" },
   { name: "Manage", href: "#" },
@@ -40,7 +40,7 @@ export default function Project() {
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               {/* Get Quoted <span aria-hidden="true">&rarr;</span> */}
-              <FaBoxes className="mr-5" size={50} />
+              <FaTh className="mr-5" size={20} />
             </a>
           </div>
         </nav>

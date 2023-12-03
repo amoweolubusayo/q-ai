@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
-import { FaXing, FaBars, FaBoxes, FaCheck } from "react-icons/fa";
+import { FaXing, FaBars, FaTh, FaCheck } from "react-icons/fa";
 
 const navigationbar = [
   { name: "Create", href: "#" },
@@ -107,7 +107,7 @@ export default function DocQuotation() {
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               {/* Get Quoted <span aria-hidden="true">&rarr;</span> */}
-              <FaBoxes className="mr-5" size={50} />
+              <FaTh className="mr-5" size={20} />
             </a>
           </div>
         </nav>
@@ -137,12 +137,8 @@ export default function DocQuotation() {
                         autoComplete="country-name"
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                       >
-                        <option>
-                         option 1
-                        </option>
-                        <option>
-                          option 2
-                        </option>
+                        <option>option 1</option>
+                        <option>option 2</option>
                       </select>
                     </div>
                   </div>
@@ -264,28 +260,25 @@ export default function DocQuotation() {
                   </div>
                 </div>
 
-
                 <div className="mt-6 flex items-center justify-start gap-x-6">
-                <button
-                  type="submit"
-                  className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Download PDF
-                </button>
-              </div>
-
-              <div className="mt-6 flex items-center justify-end gap-x-6">
-                <Link href="/docquotation/manage/details">
                   <button
                     type="submit"
-                    className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    See Details &gt; &gt;
+                    Download PDF
                   </button>
-                </Link>
-              </div>
+                </div>
 
-             
+                <div className="mt-6 flex items-center justify-end gap-x-6">
+                  <Link href="/docquotation/manage/details">
+                    <button
+                      type="submit"
+                      className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    >
+                      See Details &gt; &gt;
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

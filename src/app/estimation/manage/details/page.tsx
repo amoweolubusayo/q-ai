@@ -1,5 +1,5 @@
-"use client"
-import { FaBoxes, FaCaretDown, FaCaretUp } from "react-icons/fa";
+"use client";
+import { FaTh, FaCaretDown, FaCaretUp } from "react-icons/fa";
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
 const people = [
@@ -16,15 +16,15 @@ const navigation = [
 ];
 
 const details = [
-    {
-      heading: "Property Details",
-      description: "Residential.",
-    },
-    {
-      heading: "Building Specification",
-      description: "Brand New.",
-    },
-  ];
+  {
+    heading: "Property Details",
+    description: "Residential.",
+  },
+  {
+    heading: "Building Specification",
+    description: "Brand New.",
+  },
+];
 
 export default function Manage() {
   return (
@@ -62,7 +62,7 @@ export default function Manage() {
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               {/* Get Quoted <span aria-hidden="true">&rarr;</span> */}
-              <FaBoxes className="mr-5" size={50} />
+              <FaTh className="mr-5" size={20} />
             </a>
           </div>
         </nav>
@@ -177,9 +177,7 @@ export default function Manage() {
                     <th
                       scope="col"
                       className="relative py-3.5 pl-3 pr-4 sm:pr-0"
-                    >
-                     
-                    </th>
+                    ></th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
@@ -202,48 +200,48 @@ export default function Manage() {
                           href="#"
                           className="text-indigo-600 hover:text-indigo-900"
                         >
-                         <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
-                          {details.map((detail) => (
-                            <Disclosure
-                              as="div"
-                              key={detail.description}
-                              className="pt-6"
-                            >
-                              {({ open }) => (
-                                <>
-                                  <dt>
-                                    <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-900">
-                                      <span className="text-base font-semibold leading-7">
-                                        {detail.heading}
-                                      </span>
-                                      <span className="ml-6 flex h-7 items-center">
-                                        {open ? (
-                                          <FaCaretUp
-                                            className="h-6 w-6"
-                                            aria-hidden="true"
-                                          />
-                                        ) : (
-                                          <FaCaretDown
-                                            className="h-6 w-6"
-                                            aria-hidden="true"
-                                          />
-                                        )}
-                                      </span>
-                                    </Disclosure.Button>
-                                  </dt>
-                                  <Disclosure.Panel
-                                    as="dd"
-                                    className="mt-2 pr-12"
-                                  >
-                                    <p className="text-base leading-7 text-gray-600 text-left">
-                                      {detail.description}
-                                    </p>
-                                  </Disclosure.Panel>
-                                </>
-                              )}
-                            </Disclosure>
-                          ))}
-                        </dl>
+                          <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
+                            {details.map((detail) => (
+                              <Disclosure
+                                as="div"
+                                key={detail.description}
+                                className="pt-6"
+                              >
+                                {({ open }) => (
+                                  <>
+                                    <dt>
+                                      <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-900">
+                                        <span className="text-base font-semibold leading-7">
+                                          {detail.heading}
+                                        </span>
+                                        <span className="ml-6 flex h-7 items-center">
+                                          {open ? (
+                                            <FaCaretUp
+                                              className="h-6 w-6"
+                                              aria-hidden="true"
+                                            />
+                                          ) : (
+                                            <FaCaretDown
+                                              className="h-6 w-6"
+                                              aria-hidden="true"
+                                            />
+                                          )}
+                                        </span>
+                                      </Disclosure.Button>
+                                    </dt>
+                                    <Disclosure.Panel
+                                      as="dd"
+                                      className="mt-2 pr-12"
+                                    >
+                                      <p className="text-base leading-7 text-gray-600 text-left">
+                                        {detail.description}
+                                      </p>
+                                    </Disclosure.Panel>
+                                  </>
+                                )}
+                              </Disclosure>
+                            ))}
+                          </dl>
                         </a>
                       </td>
                     </tr>
