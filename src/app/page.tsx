@@ -257,7 +257,7 @@ export default function Home() {
             <div className="w-full max-w-xs text-center">
               <img
                 className="object-cover object-center w-full h-48 mx-auto rounded-lg"
-                src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=739&q=80"
+                src="https://github.com/amoweolubusayo/q-ai/assets/20168921/55a46cbd-3644-403d-930a-672f4745d80d"
                 alt="avatar"
               />
 
@@ -269,7 +269,7 @@ export default function Home() {
             <div className="w-full max-w-xs text-center">
               <img
                 className="object-cover object-center w-full h-48 mx-auto rounded-lg"
-                src="https://images.unsplash.com/photo-1516756587022-7891ad56a8cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+                src="https://github.com/amoweolubusayo/q-ai/assets/20168921/db37a240-68a9-4d03-ac09-8f34794ef4b2"
                 alt="avatar"
               />
 
@@ -281,7 +281,7 @@ export default function Home() {
             <div className="w-full max-w-xs text-center">
               <img
                 className="object-cover object-center w-full h-48 mx-auto rounded-lg"
-                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80"
+                src="https://github.com/amoweolubusayo/q-ai/assets/20168921/af782de0-8e26-49a9-888d-a55b345f868b"
                 alt="avatar"
               />
 

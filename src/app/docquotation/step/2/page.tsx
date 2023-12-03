@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
-import { FaXing, FaBars, FaTh, FaCheck } from "react-icons/fa";
+import { FaXing, FaBars, FaTh, FaCheckSquare } from "react-icons/fa";
 
 const navigationbar = [
   { name: "Create", href: "#" },
@@ -18,7 +18,7 @@ const transactions = [
     Entity: "Contact",
     Type: "Functional",
     MOSCOW: "MUST",
-    Status: FaCheck,
+    Status: <FaCheckSquare />,
   },
   {
     ID: "REQ DR1",
@@ -27,7 +27,7 @@ const transactions = [
     Entity: "Contact",
     Type: "Functional",
     MOSCOW: "MUST",
-    Status: FaCheck,
+    Status: <FaCheckSquare />,
   },
   {
     ID: "REQ DR1",
@@ -36,7 +36,7 @@ const transactions = [
     Entity: "Contact",
     Type: "Functional",
     MOSCOW: "MUST",
-    Status: FaCheck,
+    Status: <FaCheckSquare />,
   },
   {
     ID: "REQ DR1",
@@ -45,7 +45,7 @@ const transactions = [
     Entity: "Contact",
     Type: "Functional",
     MOSCOW: "MUST",
-    Status: FaCheck,
+    Status: <FaCheckSquare />,
   },
   {
     ID: "REQ DR1",
@@ -54,7 +54,7 @@ const transactions = [
     Entity: "Contact",
     Type: "Functional",
     MOSCOW: "MUST",
-    Status: FaCheck,
+    Status: <FaCheckSquare />,
   },
 ];
 
