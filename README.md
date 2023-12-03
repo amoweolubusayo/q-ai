@@ -6,4 +6,4 @@ Team
 - Mohit
 - Busayo
 
-https://github.com/amoweolubusayo/q-ai/assets/20168921/52eda524-1e60-40ce-81a1-092d0922291d
+![screencapture-q-ai-sigma-vercel-app-2023-12-03-16_13_59](https://github.com/amoweolubusayo/q-ai/assets/20168921/1d538065-21e8-424e-99ec-cc9e02cbf64a)
