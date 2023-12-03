@@ -15,7 +15,7 @@ export default function Project() {
     const fetchData = async () => {
       try {
         const openai = new OpenAI({
-            apiKey: "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",
+            apiKey: "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", // TEST (env variable fail of vercel. Fault tolerant)
             dangerouslyAllowBrowser: true
         });
         const prompt = `
