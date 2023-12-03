@@ -1,10 +1,42 @@
+"use client";
 import { FaTh } from "react-icons/fa";
+import { OpenAI } from "openai";
+import React, { useEffect, useState } from "react";
 const navigation = [
   { name: "Create", href: "#" },
   { name: "Manage", href: "#" },
 ];
 
 export default function Project() {
+  const [chatResponse, setChatResponse] = useState<string | null>(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const openai = new OpenAI({
+          apiKey: process.env.OPENAI_API_KEY,
+        });
+
+        const prompt = `
+          think of a random RFP based on all info submitted by a proposal and generate an informed decision for a vendor like a microsost partner company. dont include random in your statement
+              `;
+
+        const response = await openai.chat.completions.create({
+          model: "gpt-3.5-turbo",
+          messages: [
+            { role: "system", content: "You are a helpful assistant." },
+            { role: "user", content: prompt },
+          ],
+        });
+        console.log(response);
+        const value = response?.choices[0]?.message.content;
+        setChatResponse(value);
+      } catch (error) {
+        console.error("Error fetching data from OpenAI:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <>
       <header className="absolute inset-x-0 top-0 z-50">
@@ -93,7 +125,7 @@ export default function Project() {
                       name="about"
                       rows={3}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      defaultValue={""}
+                      value={chatResponse || ""}
                     />
                   </div>
                   <div className="mt-6 flex items-center justify-start gap-x-6">
@@ -112,7 +144,7 @@ export default function Project() {
                   </div>
                 </div>
 
-                <div className="col-span-full">
+                {/* <div className="col-span-full">
                   <label
                     htmlFor="about"
                     className="block text-sm font-medium leading-6 text-gray-900"
@@ -125,7 +157,7 @@ export default function Project() {
                       name="about"
                       rows={3}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      defaultValue={""}
+                      value={chatResponse || ""}
                     />
                   </div>
                   <div className="mt-6 flex items-center justify-start gap-x-6">
@@ -142,7 +174,7 @@ export default function Project() {
                       Re-generate
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </form>

@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { FaXing, FaBars, FaTh, FaCheckSquare } from "react-icons/fa";
 
@@ -69,8 +71,28 @@ function classNames(
   return classes.filter(Boolean).join(" ");
 }
 
+
+
 export default function DocQuotation() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const handleSaveClick = () => {
+    // Display toast message
+    toast.info("Please wait while our AI generates your quote", {
+      position: "bottom-right",
+      autoClose: 2000, // Adjust as needed
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+  
+    setTimeout(() => {
+      // Redirect to the link after the toast message
+      window.location.href = "/docquotation/manage";
+    }, 2000);
+  };
 
   return (
     <>
@@ -232,14 +254,14 @@ export default function DocQuotation() {
                 </div>
 
                 <div className="mt-6 flex items-center justify-end gap-x-6">
-                  <Link href="/docquotation/manage">
                     <button
                       type="submit"
+                      onClick={handleSaveClick}
                       className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                       Generate Response
                     </button>
-                  </Link>
+                  <ToastContainer />
                 </div>
               </div>
             </div>

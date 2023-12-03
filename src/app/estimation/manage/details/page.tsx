@@ -27,6 +27,23 @@ const details = [
 ];
 
 export default function Manage() {
+  const handleSaveClick = () => {
+    // // Display toast message
+    // toast.info("Please wait while our AI generates your quote", {
+    //   position: "bottom-right",
+    //   autoClose: 2000, // Adjust as needed
+    //   hideProgressBar: true,
+    //   closeOnClick: true,
+    //   pauseOnHover: false,
+    //   draggable: true,
+    //   progress: undefined,
+    // });
+
+    setTimeout(() => {
+      // Redirect to the link after the toast message
+      window.location.href = "/estimation/manage/project";
+    }, 2000);
+  };
   return (
     <>
       <header className="absolute inset-x-0 top-0 z-50">
@@ -250,14 +267,14 @@ export default function Manage() {
               </table>
 
               <div className="mt-6 flex items-center justify-start gap-x-6">
-                <Link href="/estimation/manage/project">
+
                   <button
                     type="submit"
+                    onClick={handleSaveClick}
                     className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Proceed with Consultant
                   </button>
-                </Link>
                 <button
                   type="submit"
                   className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
