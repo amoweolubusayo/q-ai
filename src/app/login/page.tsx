@@ -1,8 +1,8 @@
 import { FaGoogle, FaDiscord} from "react-icons/fa";
 const navigation = [
-  { name: "Home", href: "#" },
-  { name: "Features", href: "#features" },
-  { name: "Team", href: "#team" },
+  { name: "Home", href: "/" },
+  { name: "Features", href: "/#features" },
+  { name: "Team", href: "/#team" },
 ];
 export default function Login() {
   return (
