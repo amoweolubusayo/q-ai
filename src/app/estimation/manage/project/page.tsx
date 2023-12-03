@@ -1,10 +1,49 @@
+"use client";
 import { FaTh } from "react-icons/fa";
+import { OpenAI } from "openai";
+import React, { useEffect, useState } from "react";
+
 const navigation = [
   { name: "Create", href: "#" },
   { name: "Manage", href: "#" },
 ];
 
 export default function Project() {
+  const [chatResponse, setChatResponse] = useState<string | null>(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const openai = new OpenAI({
+          apiKey: process.env.OPENAI_API_KEY,
+        });
+
+        const prompt = `
+              pick randomly from these options. give example in figures and texts as need be but don't be empty. Don't tell me in the message that it is random
+              Services: fire alarm systems, sprinkler systems, fire extinguishers, fire hoses, emergency lighting, and kitchen suppression systems. 
+              Property type: Residential, Commercial, Industrial, Institutional, Warehouse, or Mixed-use. 
+              Property size: <5,000 sq. ft., 5,000 - 20,000 sq. ft., 20,000 - 50,000 sq. ft., 50,000 - 100,000 sq. ft., or >100,000 sq. ft. 
+              Age of building: Brand New, 1-10 Years, 10-20 Years, 30-40 Years, or 50+ Years. 
+              Based on this, provide a quote for fire prevention inspections. 
+              Subheadings: estimate number (assign a random estimate number between 1 - 5000), date(show today's date), service type (fire inspection), description of service type, quantity, rate (amount in $), tax, total amount
+            `;
+
+        const response = await openai.chat.completions.create({
+          model: "gpt-3.5-turbo",
+          messages: [
+            { role: "system", content: "You are a helpful assistant." },
+            { role: "user", content: prompt },
+          ],
+        });
+        console.log(response);
+        const value = response?.choices[0]?.message.content;
+        setChatResponse(value);
+      } catch (error) {
+        console.error("Error fetching data from OpenAI:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <>
       <header className="absolute inset-x-0 top-0 z-50">
@@ -93,7 +132,7 @@ export default function Project() {
                       name="about"
                       rows={3}
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      defaultValue={""}
+                      value={chatResponse || ""}
                     />
                   </div>
                   <div className="mt-6 flex items-center justify-start gap-x-6">
@@ -101,7 +140,7 @@ export default function Project() {
                       type="submit"
                       className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
-                      Regenerate
+                      Accept
                     </button>
                   </div>
                 </div>

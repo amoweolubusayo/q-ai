@@ -2,6 +2,8 @@
 import { FaTh, FaCaretUp, FaCaretDown } from "react-icons/fa";
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
+import React, { useState } from "react";
+// import chatHandler from '../../api/chat';
 
 const people = [
   {
@@ -28,6 +30,28 @@ const details = [
 ];
 
 export default function Manage() {
+  const [prompt, setPrompt] = useState("");
+  const [affirmation, setAffirmation] = useState("");
+  const [loading, setLoading] = useState(false);
+
+//   const handlePromptClick = (selectedPrompt: string): void => {
+//     setPrompt(selectedPrompt);
+//     setLoading(true);
+//     try {
+//         const response = chatHandler(selectedPrompt);
+//         console.log(response)
+//         // setAffirmation(response.affirmation);
+//         setLoading(false);
+//         window.location.href = '/estimation/manage/details';
+//       } catch (error) {
+//         console.error(error);
+//         setLoading(false);
+//       }
+//   };
+
+
+  
+
   return (
     <>
       <header className="absolute inset-x-0 top-0 z-50">
@@ -267,10 +291,15 @@ export default function Manage() {
                   <button
                     type="submit"
                     className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-800 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    // onClick={() =>
+                    //   handlePromptClick(
+                    //     "pick randonmly from these options. Services fire alarm systems, sprinkler systems, fire extinguishers, fire hoses, emergency lighting, and kitchen suppression systems. Property type Residential, Commercial, Industrial, Institutional, Warehouse, or Mixed-use. Property size <5,000 sq. ft., 5,000 - 20,000 sq. ft., 20,000 - 50,000 sq. ft., 50,000 - 100,000 sq. ft., or >100,000 sq. ft. Age of building Brand New, 1-10 Years, 10-20 Years, 30-40 Years, or 50+ Years. Based on this provide a quote for fire prevention inspections. it should provide the answer with these subheadings:  estimate number (assign a random estimate number between 1 - 5000) , date, service type (fire inspection), description of service type, quantity, rate (amount in $), tax , total amount"
+                    //   )
+                    // }
                   >
                     See Details &gt; &gt;
                   </button>
-                </Link>
+                  </Link>
               </div>
             </div>
           </div>

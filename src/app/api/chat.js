@@ -1,16 +1,16 @@
 
-import { Configuration, OpenAIApi } from "openai";
+import { OpenAI } from "openai";
+import * as dotenv from "dotenv";
+dotenv.config({ path: "/.env" });
 
-const configuration = new Configuration({
+const configuration = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-
-const openai = new OpenAIApi(configuration);
 
 export default async function handler(req, res) {
   const imput = req.body.imput || "";
   try {
-    const response = await openai.createChatCompletion({
+    const response = await configuration.createChatCompletion({
       model: "gpt-3.5-turbo",
       temperature: 0.6,
       messages: [{ role: "user", content: generateAffirmation(imput) }],
