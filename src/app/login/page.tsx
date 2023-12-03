@@ -1,14 +1,48 @@
 import { FaGoogle, FaDiscord} from "react-icons/fa";
+const navigation = [
+  { name: "Home", href: "#" },
+  { name: "Features", href: "#features" },
+  { name: "Team", href: "#team" },
+];
 export default function Login() {
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+       <header className="absolute inset-x-0 top-0 z-50">
+        <nav className="flex justify-between p-6 lg:px-8" aria-label="Global">
+          <div className="flex lg:flex-1">
+            <a href="/" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <img
+                className="h-8 w-auto"
+                src="https://github.com/amoweolubusayo/q-ai/assets/20168921/1f123475-c90e-49d9-b263-091bb5fddfe8"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <div className="hidden lg:flex lg:gap-x-12">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="/login"
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
+              Get Quoted <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </nav>
+      </header>
+      <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8 mt-4">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <img
-            className="mx-auto h-10 w-auto"
-            src="https://github.com/amoweolubusayo/q-ai/assets/20168921/1f123475-c90e-49d9-b263-091bb5fddfe8"
-            alt="Your Company"
-          />
           <h2 className="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Sign in to your account
           </h2>
