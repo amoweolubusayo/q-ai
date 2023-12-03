@@ -15,11 +15,36 @@ import {
 } from "react-icons/fa";
 const navigation = [
   { name: "Home", href: "#" },
-  { name: "Vision", href: "#" },
-  { name: "Team", href: "#" },
-  { name: "Documentation", href: "#" },
-  { name: "FAQ", href: "#" },
+  { name: "Features", href: "#features" },
+  { name: "Team", href: "#team" },
 ];
+
+const footernavigation = {
+  solutions: [
+    { name: 'Marketing', href: '#' },
+    { name: 'Analytics', href: '#' },
+    { name: 'Commerce', href: '#' },
+    { name: 'Insights', href: '#' },
+  ],
+  support: [
+    { name: 'Pricing', href: '#' },
+    { name: 'Documentation', href: '#' },
+    { name: 'Guides', href: '#' },
+    { name: 'API Status', href: '#' },
+  ],
+  company: [
+    { name: 'About', href: '#' },
+    { name: 'Blog', href: '#' },
+    { name: 'Jobs', href: '#' },
+    { name: 'Press', href: '#' },
+    { name: 'Partners', href: '#' },
+  ],
+  legal: [
+    { name: 'Claim', href: '#' },
+    { name: 'Privacy', href: '#' },
+    { name: 'Terms', href: '#' },
+  ],
+}
 
 const aims = [
   {
@@ -58,55 +83,22 @@ const aims = [
   },
 ];
 
-const features = [
-  {
-    name: "Join DrameBase as an Artist:",
-    description:
-      "Upload Music and Videos for streaming. Mint your content as NFT’s. Have Exclusive EP releases. Get funding and donations on projects. Host Virtual Events",
-    icon: FaMusic,
-  },
-  {
-    name: "Join DrameBase as a Fan:",
-    description:
-      "Video Streaming.Music Streaming.Exclusive EP Access. Earn rewards for listening. Pay for Tickets to shows. Buy NFT’s and order in a physical copy",
-    icon: FaVideo,
-  },
-  {
-    name: "Token.",
-    description: "DrameBase Token (DB)",
-    icon: FaMoneyBill,
-  },
-];
-
-const people = [
-  {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-  // More people...
-];
 export default function Home() {
-
   return (
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav
-          className="flex items-center justify-between p-6 lg:px-8"
-          aria-label="Global"
-        >
+        <nav className="flex justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="https://github.com/amoweolubusayo/q-ai/assets/20168921/1f123475-c90e-49d9-b263-091bb5fddfe8"
                 alt=""
               />
             </a>
           </div>
-        
+
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
               <a
@@ -119,7 +111,6 @@ export default function Home() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-         
             <a
               href="/login"
               className="text-sm font-semibold leading-6 text-gray-900"
@@ -131,7 +122,7 @@ export default function Home() {
       </header>
 
       <div className="relative isolate px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        {/* <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-blackring-1 ring-gray-900/10 hover:ring-gray-900/20">
              
@@ -157,34 +148,63 @@ export default function Home() {
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
             }}
           />
+        </div> */}
+
+        <div className="relative bg-white mt-20">
+          <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8 mt-20">
+            <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
+              <div className="mx-auto max-w-2xl lg:mx-0">
+                <div className="hidden sm:mt-32 sm:flex lg:mt-16"></div>
+                <h1 className="mt-24 text-4xl font-bold tracking-tight text-gray-900 sm:mt-10 sm:text-6xl">
+                  Welcome to QAI
+                </h1>
+                <p className="mt-6 text-lg leading-8 text-gray-600">
+                  AI tool for quotation based on real time and market insights
+                </p>
+                <div className="mt-10 flex items-center gap-x-6">
+                  <a
+                    href="#"
+                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Get started
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
+              <img
+                className="aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
+                src="https://images.unsplash.com/photo-1498758536662-35b82cd15e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="bg-white py-24 sm:py-32">
+        <div className="bg-gray-100 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl lg:text-center">
-              <h1 className="font-semibold leading-7 text-indigo-600 text-3xl">
-                Vision
-              </h1>
+            <div className="mx-auto max-w-2xl sm:text-center" id="features">
+              <h2 className="text-base font-semibold leading-7 text-indigo-600">
+                The model you need
+              </h2>
+              <p className="mt-4 text-3xl tracking-tight text-gray-900 sm:text-4xl">
+                For your Commercial & Residential Property Quotation Services
+                and Corporate RFP & RFQ Response Suite.
+              </p>
             </div>
-            <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-              <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                {aims.map((aim) => (
-                  <div key={aim.name} className="relative pl-16">
-                    <dt className="text-base font-semibold leading-7 text-gray-900">
-                      <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                        <aim.icon
-                          className="h-6 w-6 text-white"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      {aim.name}
-                    </dt>
-                    <dd className="mt-2 text-base leading-7 text-gray-600">
-                      {aim.description}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+          </div>
+          <div className="relative overflow-hidden pt-16">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <img
+                src="https://github.com/amoweolubusayo/q-ai/assets/20168921/fc9a8b90-bb22-4612-bdbe-0293386cea6f"
+                alt="App screenshot"
+                className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
+                width={2432}
+                height={1442}
+              />
+              <div className="relative" aria-hidden="true">
+                <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
+              </div>
             </div>
           </div>
         </div>
@@ -228,7 +248,7 @@ export default function Home() {
           </div>
         </div> */}
 
-        <div className="container px-6 py-8 mx-auto">
+        <div className="container px-6 py-8 mx-auto" id="team">
           <h2 className="text-2xl font-semibold text-center text-indigo-600 capitalize lg:text-3xl">
             Our Team
           </h2>
@@ -242,8 +262,7 @@ export default function Home() {
               />
 
               <div className="mt-2">
-                <h3 className="text-lg font-medium text-black">Ahmed Omer</h3>
-                <span className="mt-1 font-medium text-black">CEO</span>
+                <h3 className="text-lg font-medium text-black">Paul</h3>
               </div>
             </div>
 
@@ -255,8 +274,7 @@ export default function Home() {
               />
 
               <div className="mt-2">
-                <h3 className="text-lg font-medium text-black">Jane Doe</h3>
-                <span className="mt-1 font-medium text-black">Co-founder</span>
+                <h3 className="text-lg font-medium text-black">Busayo</h3>
               </div>
             </div>
 
@@ -268,8 +286,7 @@ export default function Home() {
               />
 
               <div className="mt-2">
-                <h3 className="text-lg font-medium text-black">Steve Ben</h3>
-                <span className="mt-1 font-medium text-black">UI/UX</span>
+                <h3 className="text-lg font-medium text-black">Mohit</h3>
               </div>
             </div>
 
@@ -282,133 +299,82 @@ export default function Home() {
 
               <div className="mt-2">
                 <h3 className="text-lg font-medium text-black ">
-                  Patterson Johnson
+                  SF
                 </h3>
-                <span className="mt-1 font-medium text-black">
-                  Software Engineer
-                </span>
+                
               </div>
             </div>
           </div>
         </div>
 
-        <section className="bg-white">
-          <div className="container px-6 py-12 mx-auto">
-            <h1 className="text-2xl font-semibold lg:text-3xl text-indigo-600">
-              Frequently asked questions
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              We have answered some questions for you
-            </p>
-            <div className="grid grid-cols-1 gap-8 mt-8 lg:mt-16 md:grid-cols-2 xl:grid-cols-3">
+        <footer className="bg-gray-100" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" className="sr-only">
+        Footer
+      </h2>
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+          <img
+            className="h-7"
+            src="https://github.com/amoweolubusayo/q-ai/assets/20168921/1f123475-c90e-49d9-b263-091bb5fddfe8"
+            alt="Company name"
+          />
+          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <div className="inline-block p-3 text-white bg-indigo-600 rounded-lg">
-                  <FaMusic />
-                </div>
-
-                <div className="mt-2">
-                  <h1 className="text-xl font-semibold text-gray-700 text-indigo-600">
-                    What is QAI?
-                  </h1>
-
-                  <p className="mt-2 text-sm text-black">
-                    {/* DrameBase is a decentralized media streaming platform. It
-                    uses blockchain InterPlanetary File Systems (IPFS)
-                    technology to distribute media content. */}
-                  </p>
-                </div>
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">Solutions</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {footernavigation.solutions.map((item) => (
+                    <li key={item.name}>
+                      <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
-
-              <div>
-                <div className="inline-block p-3 text-white bg-indigo-600 rounded-lg">
-                  <FaSubscript />
-                </div>
-
-                <div className="mt-2">
-                  <h1 className="text-xl font-semibold text-gray-700 text-indigo-600">
-                    What Problem does QAI solve?
-                  </h1>
-
-                  <p className="mt-2 text-sm text-black">
-                    {/* It solves the royalty payment transparency issues and data
-                    infringement issues. */}
-                  </p>
-                </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">Support</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {footernavigation.support.map((item) => (
+                    <li key={item.name}>
+                      <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
-
+            </div>
+            <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <div className="inline-block p-3 text-white bg-indigo-600 rounded-lg">
-                  <FaMoneyBillWave />
-                </div>
-
-                <div className="mt-2">
-                  <h1 className="text-xl font-semibold text-gray-700 text-indigo-600">
-                    How do I subscribe?
-                  </h1>
-
-                  <p className="mt-2 text-sm text-black">
-                    {/* You can subscribe using your local currency, which the
-                    equivalent token will be credited into your fan account. */}
-                  </p>
-                </div>
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">Company</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {footernavigation.company.map((item) => (
+                    <li key={item.name}>
+                      <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
-
-              <div>
-                <div className="inline-block p-3 text-white bg-indigo-600 rounded-lg mt-4">
-                  <FaTimesCircle />
-                </div>
-
-                <div className="mt-2">
-                  <h1 className="text-xl font-semibold text-gray-700 text-indigo-600">
-                    Do I need knowledge of AI to use QAI?
-                  </h1>
-
-                  <p className="mt-2 text-sm text-black">
-                    {/* DrameBase User-Interface will be built such that anyone who
-                    can operate a smartphone can use the platform. */}
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div className="inline-block p-3 text-white bg-indigo-600 rounded-lg mt-4">
-                  <FaVideo />
-                </div>
-
-                <div className="mt-2">
-                  <h1 className="text-xl font-semibold text-gray-700 text-indigo-600">
-                    Why is QAI better than other 
-                    platforms?
-                  </h1>
-
-                  <p className="mt-2 text-sm text-black">
-                    {/* DrameBases uses Blockchain, its shared ledger approach,
-                    improves the media supply chain, and decreases copyright
-                    infringements by adding transparency, security, and control. */}
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div className="inline-block p-3 text-white bg-indigo-600 rounded-lg mt-4">
-                  <FaThumbsUp />
-                </div>
-
-                <div className="mt-2">
-                  <h1 className="text-xl font-semibold text-gray-700 text-indigo-600">
-                    How can I contact the team?
-                  </h1>
-
-                  <p className="mt-2 text-sm text-black">
-                    {/* This is a new technology and access is needed to the artists
-                    or record labels. We would start with African artists and
-                    later on to the other artists in the world. */}
-                  </p>
-                </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {footernavigation.legal.map((item) => (
+                    <li key={item.name}>
+                      <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </footer>
       </div>
     </div>
   );
