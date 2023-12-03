@@ -91,8 +91,8 @@ export default function Example() {
                   <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2">
                     <div className="flex h-16 shrink-0 items-center">
                       <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        className="h-20 w-20"
+                        src="https://github.com/amoweolubusayo/q-ai/assets/20168921/3c562b92-18cd-47ff-a700-1960ba604057"
                         alt="Your Company"
                       />
                     </div>
@@ -133,8 +133,8 @@ export default function Example() {
           <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
             <div className="flex h-16 shrink-0 items-center">
               <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="h-20 w-20"
+                src="https://github.com/amoweolubusayo/q-ai/assets/20168921/3c562b92-18cd-47ff-a700-1960ba604057"
                 alt="Your Company"
               />
             </div>

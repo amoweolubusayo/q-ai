@@ -16,8 +16,8 @@ export default function Project() {
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="h-20 w-20"
+                src="https://github.com/amoweolubusayo/q-ai/assets/20168921/3c562b92-18cd-47ff-a700-1960ba604057"
                 alt=""
               />
             </a>

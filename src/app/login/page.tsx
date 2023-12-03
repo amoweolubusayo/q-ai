@@ -1,4 +1,4 @@
-import { FaGoogle, FaDiscord} from "react-icons/fa";
+import { FaGoogle, FaDiscord } from "react-icons/fa";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Features", href: "/#features" },
@@ -7,14 +7,14 @@ const navigation = [
 export default function Login() {
   return (
     <>
-       <header className="absolute inset-x-0 top-0 z-50">
+      <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
-                className="h-8 w-auto"
-                src="https://github.com/amoweolubusayo/q-ai/assets/20168921/1f123475-c90e-49d9-b263-091bb5fddfe8"
+                className="h-20 w-20"
+                src="https://github.com/amoweolubusayo/q-ai/assets/20168921/3c562b92-18cd-47ff-a700-1960ba604057"
                 alt=""
               />
             </a>
@@ -146,7 +146,7 @@ export default function Login() {
                   href="/selectmodel"
                   className="flex w-full items-center justify-center gap-3 rounded-md bg-[#7289DA] px-3 py-1.5 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7289DA]"
                 >
-                  <FaDiscord className="h-5 w-5"/>
+                  <FaDiscord className="h-5 w-5" />
                   <span className="text-sm font-semibold leading-6">
                     Discord
                   </span>
@@ -156,7 +156,7 @@ export default function Login() {
                   href="/selectmodel"
                   className="flex w-full items-center justify-center gap-3 rounded-md bg-[#24292F] px-3 py-1.5 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24292F]"
                 >
-                  <FaGoogle className="h-5 w-5"/>
+                  <FaGoogle className="h-5 w-5" />
                   <span className="text-sm font-semibold leading-6">
                     Google
                   </span>
