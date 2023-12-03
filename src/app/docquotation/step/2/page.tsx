@@ -59,8 +59,8 @@ const transactions = [
 ];
 
 const tabs = [
-  { name: "Step 1", href: "#", current: false },
-  { name: "Step 2", href: "#", current: true },
+  { name: "Step 1", href: "1", current: false },
+  { name: "Step 2", href: "2", current: true },
 ];
 
 function classNames(

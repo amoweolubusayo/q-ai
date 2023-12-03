@@ -22,8 +22,8 @@ const teams = [
 ];
 
 const tabs = [
-  { name: "Step 1", href: "#", current: true },
-  { name: "Step 2", href: "#", current: false },
+  { name: "Step 1", href: "1", current: true },
+  { name: "Step 2", href: "2", current: false },
 ];
 
 function classNames(
