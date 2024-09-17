@@ -1,4 +1,5 @@
 # Property Inspection and Quote Prediction API
+
 ## Overview 
 This project demonstrates a machine learning-powered API that predicts the service cost for property maintenance tasks based on property inspection data. The project is composed of a data generation script, a machine learning model for predicting service costs, and a Flask API that serves predictions to users via HTTP requests.
 
